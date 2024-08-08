@@ -176,3 +176,19 @@ When('there are ideas:') do |ideas|
    end
 
 end
+
+Given(/^there is an info$/) do
+   info = FactoryBot.build(:info)
+   info.type = 'version'
+   info.text = '1.0'
+   info.save
+end
+
+Given("the server has infos:") do |table|
+   table.hashes.each do |s|
+      info = FactoryBot.build(:info)
+      info.type = s[:type]
+      info.text = s[:text]
+      info.save
+   end
+end

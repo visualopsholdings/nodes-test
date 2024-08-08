@@ -3,6 +3,12 @@ require 'date'
 
 FactoryBot.define do
 
+   factory :info do |f|
+      f.text { '1.0' }
+      f.type { 'schemaVersion' }
+      f.date { DateTime.now }
+   end
+
    factory :user do |f|
       f.modifyDate { DateTime.now }
       f.salt { 'T9Bv8J0hPaFJ02Rp22pSSt4aSTiYX7ZL3gmYF0aYFz+aLjA/Mzp26WJhf6QLuoRQrYb6GCaysCznRVNwsS13+YtvFKEQU1yII0tcTlkMIwUHUOxf8bimCyHXtr951Wi08x7iQsCNivghKyxPYlLmoymuDZ27bWYgByRG4vOGlUM=' }
