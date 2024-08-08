@@ -177,6 +177,13 @@ When('there are ideas:') do |ideas|
 
 end
 
+Given(/^the server has id "([^"]*)"$/) do |id|
+   info = FactoryBot.build(:info)
+   info.type = 'serverId'
+   info.text = id
+   info.save
+end
+
 Given(/^there is an info$/) do
    info = FactoryBot.build(:info)
    info.type = 'version'
