@@ -199,3 +199,39 @@ Given("the server has infos:") do |table|
       info.save
    end
 end
+
+When('the server has upstream {string}') do |string|
+   info = FactoryBot.build(:info)
+   info.type = "upstream"
+   info.text = string
+   info.save
+end
+
+When('the server has privateKey {string}') do |string|
+   info = FactoryBot.build(:info)
+   info.type = "privateKey"
+   info.text = string
+   info.save
+end
+
+When('the server has pubKey {string}') do |string|
+   info = FactoryBot.build(:info)
+   info.type = "pubKey"
+   info.text = string
+   info.save
+end
+
+When('the server has upstreamPubKey {string}') do |string|
+   info = FactoryBot.build(:info)
+   info.type = "upstreamPubKey"
+   info.text = string
+   info.save
+end
+
+Given('the server has privateKey in file {string}') do |path|
+   info = FactoryBot.build(:info)
+   info.type = "privateKey"
+   info.text = File.read(path)
+   info.save
+end
+
