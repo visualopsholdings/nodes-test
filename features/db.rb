@@ -235,3 +235,15 @@ Given('the server has privateKey in file {string}') do |path|
    info.save
 end
 
+Given("there are sites:") do |table|
+   table.hashes.each do |s|
+      site = FactoryBot.build(:site)
+      if s[:headerTitle] && s[:headerTitle].length > 0
+         site.headerTitle = s[:headerTitle]
+      end
+      if s[:streamBgColor] && s[:streamBgColor].length > 0
+         site.streamBgColor = s[:streamBgColor]
+      end
+      site.save
+   end
+end

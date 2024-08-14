@@ -39,4 +39,8 @@ FactoryBot.define do
       f.modifyDate { DateTime.now }
    end
 
+   factory :site do |f|
+      f.modifyDate { DateTime.now }
+   end
+
 end
