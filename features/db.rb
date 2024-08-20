@@ -247,3 +247,9 @@ Given("there are sites:") do |table|
       site.save
    end
 end
+
+Given("eventually the user fullname {string} with salt and hash appears in the DB") do |fullname|
+   eventually { expect(User.where(fullname: fullname).first.salt).not_to be_nil }
+   # the hash field for a user needs to be queried directly since it conflicts with a method of ruby
+   eventually { expect(Mongoid::Clients.default[:users].find(fullname: fullname).first[:hash]).not_to be_nil }
+end
