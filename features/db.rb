@@ -1,4 +1,7 @@
 
+Given('the DB is new') do
+end
+
 Given(/^there are users:$/) do |users|
 
    users.hashes.each do |s|
@@ -252,4 +255,16 @@ Given("eventually the user fullname {string} with salt and hash appears in the D
    eventually { expect(User.where(fullname: fullname).first.salt).not_to be_nil }
    # the hash field for a user needs to be queried directly since it conflicts with a method of ruby
    eventually { expect(Mongoid::Clients.default[:users].find(fullname: fullname).first[:hash]).not_to be_nil }
+end
+
+Given(/^groups have policies:$/) do |table|
+   table.hashes.each do |s|
+      group = Group.where(name: s[:name]).first
+      group.policy = Policy.where(name: s[:policy]).first._id.to_s
+      group.save
+   end
+end
+
+Then(/^eventually there is a group "([^"]*)" in the DB$/) do |group|
+   eventually { expect(Group.where(name: group).length).to eq(1) }
 end
