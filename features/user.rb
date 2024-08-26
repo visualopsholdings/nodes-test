@@ -10,5 +10,6 @@ class User
    field :newHash, type: String
    field :fullname, type: String
    field :admin, type: Boolean
+   field :active, type: Boolean
    
 end

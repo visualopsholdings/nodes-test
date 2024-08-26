@@ -18,6 +18,12 @@ Given(/^there are users:$/) do |users|
          user.fullname = s[:fullname]
       end
             
+      if s[:active] && s[:active].length > 0
+         user.active = s[:active] == "true"
+      else
+         user.active = true
+      end
+
       user.save
       
    end
