@@ -13,10 +13,13 @@ When('there is default security') do
    })
          
    step "there are policies:", table(%{
-#         | name   | users        |
-#          | p1     | leanne tracy |
          | name   | viewuser           | viewgroup | edituser           | editgroup | execuser           | execgroup |
          | p1     |                    | Team 1    |                    | Team 1    |                    | Team 1    |
+   })
+         
+   step "groups have policies:", table(%{
+         | name         | policy |
+         | Team 1       | p1     |
    })
          
    step "there are users in group \"Team 1\":", table(%{

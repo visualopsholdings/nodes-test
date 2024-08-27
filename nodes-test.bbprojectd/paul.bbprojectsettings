@@ -235,43 +235,6 @@
 		<dict>
 			<key>BookmarkData</key>
 			<data>
-			Ym9vazwDAAAAAAQQMAAAAO5OEcWTRcZh1fyoa8puSSCU45B8lzeS
-			0SuzdwOJW4+iLAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMA
-			AAAEAAAAAQEAAHBhdWwDAAAAAQEAAERldgAKAAAAAQEAAG5vZGVz
-			LXRlc3QAAAgAAAABAQAAZmVhdHVyZXMHAAAAAQEAAHVzZXIucmIA
-			GAAAAAEGAAAQAAAAIAAAACwAAAA4AAAATAAAAFwAAAAIAAAABAMA
-			ANhaAAAAAAAACAAAAAQDAAC8MgQAAAAAAAgAAAAEAwAARoMWAAAA
-			AAAIAAAABAMAAIS2QhIAAAAACAAAAAQDAAC6kUISAAAAAAgAAAAE
-			AwAAST89EgAAAAAYAAAAAQYAAIwAAACcAAAArAAAALwAAADMAAAA
-			3AAAAAgAAAAABAAAQcYrsCxhsI0YAAAAAQIAAAEAAAAAAAAADwAA
-			AAAAAAAAAAAAAAAAAAgAAAAEAwAABAAAAAAAAAAEAAAAAwMAAPUB
-			AAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQI
-			AAAABAMAAACQgpbnAAAACAAAAAAEAABBxi/IBoAAACQAAAABAQAA
-			QTE0RTlGMzgtQUNBRC00RUZCLTk0Q0EtMzQ0NTcxRkU1QzY5GAAA
-			AAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8A
-			AAAAAAAAAQUAABoAAAABAQAATlNVUkxEb2N1bWVudElkZW50aWZp
-			ZXJLZXkAAAQAAAADAwAAQhQGANgAAAD+////AQAAAAAAAAARAAAA
-			BBAAAGwAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAA
-			AAwBAAAAAAAAAiAAAOgBAAAAAAAABSAAAFgBAAAAAAAAECAAAGgB
-			AAAAAAAAESAAAJwBAAAAAAAAEiAAAHwBAAAAAAAAEyAAAIwBAAAA
-			AAAAICAAAMgBAAAAAAAAMCAAAPQBAAAAAAAAAcAAADwBAAAAAAAA
-			EcAAACAAAAAAAAAAEsAAAEwBAAAAAAAAENAAAAQAAAAAAAAA/AEA
-			gCACAAAAAAAA
-			</data>
-			<key>FileURL</key>
-			<string>file:///Users/paul/Dev/nodes-test/features/user.rb</string>
-			<key>HasSecurityScope</key>
-			<true/>
-			<key>RelativePath</key>
-			<string>./features/user.rb</string>
-			<key>TypeID</key>
-			<string>_CFileLocator</string>
-			<key>Version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>BookmarkData</key>
-			<data>
 			Ym9vawQDAAAAAAQQMAAAACCXcCXBfqBFzHEMywEZmzykBFql1KSd
 			hcc6T6st+NMRAAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMA
 			AAAEAAAAAQEAAHBhdWwDAAAAAQEAAERldgAKAAAAAQEAAG5vZGVz
@@ -341,6 +304,43 @@
 			<key>Version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>BookmarkData</key>
+			<data>
+			Ym9vazwDAAAAAAQQMAAAAO5OEcWTRcZh1fyoa8puSSCU45B8lzeS
+			0SuzdwOJW4+iLAIAAAQAAAADAwAAAAgAKAUAAAABAQAAVXNlcnMA
+			AAAEAAAAAQEAAHBhdWwDAAAAAQEAAERldgAKAAAAAQEAAG5vZGVz
+			LXRlc3QAAAgAAAABAQAAZmVhdHVyZXMHAAAAAQEAAHVzZXIucmIA
+			GAAAAAEGAAAQAAAAIAAAACwAAAA4AAAATAAAAFwAAAAIAAAABAMA
+			ANhaAAAAAAAACAAAAAQDAAC8MgQAAAAAAAgAAAAEAwAARoMWAAAA
+			AAAIAAAABAMAAIS2QhIAAAAACAAAAAQDAAC6kUISAAAAAAgAAAAE
+			AwAAST89EgAAAAAYAAAAAQYAAIwAAACcAAAArAAAALwAAADMAAAA
+			3AAAAAgAAAAABAAAQcYrsCxhsI0YAAAAAQIAAAEAAAAAAAAADwAA
+			AAAAAAAAAAAAAAAAAAgAAAAEAwAABAAAAAAAAAAEAAAAAwMAAPUB
+			AAAIAAAAAQkAAGZpbGU6Ly8vDAAAAAEBAABNYWNpbnRvc2ggSEQI
+			AAAABAMAAACQgpbnAAAACAAAAAAEAABBxi/IBoAAACQAAAABAQAA
+			QTE0RTlGMzgtQUNBRC00RUZCLTk0Q0EtMzQ0NTcxRkU1QzY5GAAA
+			AAECAACBAAAAAQAAAO8TAAABAAAAAAAAAAAAAAABAAAAAQEAAC8A
+			AAAAAAAAAQUAABoAAAABAQAATlNVUkxEb2N1bWVudElkZW50aWZp
+			ZXJLZXkAAAQAAAADAwAAQhQGANgAAAD+////AQAAAAAAAAARAAAA
+			BBAAAGwAAAAAAAAABRAAAOwAAAAAAAAAEBAAABwBAAAAAAAAQBAA
+			AAwBAAAAAAAAAiAAAOgBAAAAAAAABSAAAFgBAAAAAAAAECAAAGgB
+			AAAAAAAAESAAAJwBAAAAAAAAEiAAAHwBAAAAAAAAEyAAAIwBAAAA
+			AAAAICAAAMgBAAAAAAAAMCAAAPQBAAAAAAAAAcAAADwBAAAAAAAA
+			EcAAACAAAAAAAAAAEsAAAEwBAAAAAAAAENAAAAQAAAAAAAAA/AEA
+			gCACAAAAAAAA
+			</data>
+			<key>FileURL</key>
+			<string>file:///Users/paul/Dev/nodes-test/features/user.rb</string>
+			<key>HasSecurityScope</key>
+			<true/>
+			<key>RelativePath</key>
+			<string>./features/user.rb</string>
+			<key>TypeID</key>
+			<string>_CFileLocator</string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>OpenDocumentsExpanded</key>
 	<true/>
@@ -354,7 +354,7 @@
 	<array>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -396,7 +396,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -440,7 +440,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -482,7 +482,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -524,7 +524,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -566,7 +566,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -608,7 +608,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-08-26T06:58:52Z</date>
+			<date>2024-08-26T06:59:44Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -659,6 +659,6 @@
 	<key>ViewSplitterPosition:paul</key>
 	<real>0.19078947603702545</real>
 	<key>WindowFrame:paul:displays([(0, 0), (1440, 900)])</key>
-	<string>rect(53,-30,853,1034)</string>
+	<string>rect(54,217,854,1281)</string>
 </dict>
 </plist>
