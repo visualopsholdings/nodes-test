@@ -274,3 +274,7 @@ end
 Then(/^eventually there is a group "([^"]*)" in the DB$/) do |group|
    eventually { expect(Group.where(name: group).length).to eq(1) }
 end
+
+When('eventually there is a site {string} in the DB') do |title|
+   eventually { expect(Site.where(headerTitle: title).length).to eq(1) }
+end
