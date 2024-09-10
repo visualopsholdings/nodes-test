@@ -278,3 +278,7 @@ end
 When('eventually there is a site {string} in the DB') do |title|
    eventually { expect(Site.where(headerTitle: title).length).to eq(1) }
 end
+
+When('eventually there are {int} streams in the DB') do |count|
+   eventually { expect(Stream.count).to eq(count.to_i) }
+end
