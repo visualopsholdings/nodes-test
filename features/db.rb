@@ -271,12 +271,16 @@ Given(/^groups have policies:$/) do |table|
    end
 end
 
+When('eventually there is a site {string} in the DB') do |title|
+   eventually { expect(Site.where(headerTitle: title).length).to eq(1) }
+end
+
 Then(/^eventually there is a group "([^"]*)" in the DB$/) do |name|
    eventually { expect(Group.where(name: name).length).to eq(1) }
 end
 
-When('eventually there is a site {string} in the DB') do |title|
-   eventually { expect(Site.where(headerTitle: title).length).to eq(1) }
+Given('eventually there are {int} groups in the DB') do |count|
+   eventually { expect(Group.count).to eq(count.to_i) }
 end
 
 When('eventually there are {int} streams in the DB') do |count|
@@ -286,3 +290,4 @@ end
 Then('eventually there is a stream {string} in the DB') do |name|
    eventually { expect(Stream.where(name: name).length).to eq(1) }
 end
+

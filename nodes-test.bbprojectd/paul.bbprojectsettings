@@ -5,7 +5,7 @@
 	<key>EmbeddedEditorHidden:paul</key>
 	<false/>
 	<key>ExpandedEditorWidth:paul:displays([(0, 0), (1440, 900)])</key>
-	<integer>861</integer>
+	<integer>1228</integer>
 	<key>ExpandedItems:paul</key>
 	<array>
 		<string>17C1EA9E-BE96-4A25-803E-35136DDEF284</string>
@@ -102,7 +102,7 @@
 	<array>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -146,7 +146,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -190,7 +190,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -232,7 +232,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -274,7 +274,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -316,7 +316,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -358,7 +358,7 @@
 		</dict>
 		<dict>
 			<key>Date</key>
-			<date>2024-09-10T04:09:51Z</date>
+			<date>2024-09-10T04:58:15Z</date>
 			<key>Location</key>
 			<dict>
 				<key>BookmarkData</key>
@@ -407,8 +407,8 @@
 	<key>ToolbarVisible:paul</key>
 	<false/>
 	<key>ViewSplitterPosition:paul</key>
-	<real>0.19078947603702545</real>
+	<real>0.14185884594917297</real>
 	<key>WindowFrame:paul:displays([(0, 0), (1440, 900)])</key>
-	<string>rect(53,9,853,1073)</string>
+	<string>rect(53,9,853,1440)</string>
 </dict>
 </plist>
