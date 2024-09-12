@@ -155,16 +155,16 @@ When('there are users in group {string}:') do |name, table|
    end
    group.save
    
-   puts `$NODES_HOME/build/nodesaggregate --coll=group $NODES_HOME/src/useringroups.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=group $NODES_HOME/scripts/useringroups.json`
 
 end
 
 When('the security indexes are generated') do
 
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/src/groupeditpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/src/groupviewpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/src/usereditpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/src/userviewpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/groupeditpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/groupviewpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/usereditpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/userviewpermissions.json`
 
 end
 
