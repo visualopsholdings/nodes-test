@@ -112,6 +112,9 @@ Given(/^there are streams:$/) do |table|
       if s[:policy] && s[:policy].length > 0
          stream.policy = Policy.where(name: s[:policy]).first._id.to_s
       end
+      if s[:streambits] && s[:streambits].length > 0
+         stream.streambits = s[:streambits].to_i
+      end
 
       stream.active = true
       stream.save
