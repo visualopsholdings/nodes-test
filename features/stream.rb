@@ -8,4 +8,6 @@ class Stream
    field :policy, type: String
    field :active, type: Boolean
 
+   field :streambits, type: Integer
+
 end
