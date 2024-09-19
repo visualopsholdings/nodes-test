@@ -294,3 +294,6 @@ Then('eventually there is a stream {string} in the DB') do |name|
    eventually { expect(Stream.where(name: name).length).to eq(1) }
 end
 
+Given(/^eventually there are (\d+) ideas in the DB$/) do |n|
+   eventually { expect(Idea.count).to eq(n.to_i) }
+end
