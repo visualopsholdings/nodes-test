@@ -1,7 +1,4 @@
 
-Given('the DB is new') do
-end
-
 Given(/^there are users:$/) do |users|
 
    users.hashes.each do |s|
