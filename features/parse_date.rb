@@ -35,10 +35,10 @@ def parse_date(s)
       raise "unknown units", units
     end
   else
-   if s
-    return Date.parse(s)
-   end
+    if s
+      return Time.parse(s)
+    end
+    return s
   end
   return today
-   return s
 end

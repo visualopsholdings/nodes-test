@@ -21,6 +21,10 @@ Given(/^there are users:$/) do |users|
          user.active = true
       end
 
+      if s[:modifyDate] && s[:modifyDate].length > 0
+         user.modifyDate = parse_date(s[:modifyDate])
+      end
+
       user.save
       
    end
