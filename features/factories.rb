@@ -42,5 +42,9 @@ FactoryBot.define do
    factory :site do |f|
       f.modifyDate { DateTime.now }
    end
+   
+   factory :node do |f|
+   end
+
 
 end

@@ -298,3 +298,19 @@ end
 Given(/^eventually there are (\d+) ideas in the DB$/) do |n|
    eventually { expect(Idea.count).to eq(n.to_i) }
 end
+
+When('the server has nodes:') do |table|
+
+   table.hashes.each do |s|
+      node = FactoryBot.build(:node)
+      node.serverId = s[:id]
+      node.pubKey = s[:pubKey]
+      node.headerTitle = s[:headerTitle]
+      node.build = s[:build]
+      if s[:build] && s[:build].length > 0
+         site.build = s[:build]
+      end
+      node.save
+   end
+   
+end
