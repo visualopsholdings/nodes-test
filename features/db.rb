@@ -305,8 +305,9 @@ When('the server has nodes:') do |table|
       node = FactoryBot.build(:node)
       node.serverId = s[:id]
       node.pubKey = s[:pubKey]
-      node.headerTitle = s[:headerTitle]
-      node.build = s[:build]
+      if s[:headerTitle] && s[:headerTitle].length > 0
+         site.headerTitle = s[:headerTitle]
+      end
       if s[:build] && s[:build].length > 0
          site.build = s[:build]
       end
