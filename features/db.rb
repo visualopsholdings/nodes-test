@@ -306,10 +306,10 @@ When('the server has nodes:') do |table|
       node.serverId = s[:id]
       node.pubKey = s[:pubKey]
       if s[:headerTitle] && s[:headerTitle].length > 0
-         site.headerTitle = s[:headerTitle]
+         node.headerTitle = s[:headerTitle]
       end
       if s[:build] && s[:build].length > 0
-         site.build = s[:build]
+         node.build = s[:build]
       end
       node.save
    end
