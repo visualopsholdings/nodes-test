@@ -315,3 +315,7 @@ When('the server has nodes:') do |table|
    end
    
 end
+
+When(/^eventually the group "([^"]*)" with (\d+) member appears in the DB$/) do |group, count|
+   eventually { expect(Group.where(name: group).first.group_members.count).to eq(count.to_i) }
+end
