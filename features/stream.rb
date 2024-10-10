@@ -7,6 +7,7 @@ class Stream
    field :modifyDate, type: Time
    field :policy, type: String
    field :active, type: Boolean
+   field :upstream, type: Boolean
 
    field :streambits, type: Integer
 

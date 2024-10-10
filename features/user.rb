@@ -11,5 +11,6 @@ class User
    field :fullname, type: String
    field :admin, type: Boolean
    field :active, type: Boolean
+   field :upstream, type: Boolean
    
 end

@@ -25,6 +25,10 @@ Given(/^there are users:$/) do |users|
          user.modifyDate = parse_date(s[:modifyDate])
       end
 
+      if s[:upstream] && s[:upstream].length > 0
+         user.upstream = s[:upstream] == "true"
+      end
+
       user.save
       
    end
@@ -117,6 +121,10 @@ Given(/^there are streams:$/) do |table|
          stream.streambits = s[:streambits].to_i
       end
 
+      if s[:upstream] && s[:upstream].length > 0
+         user.upstream = s[:upstream] == "true"
+      end
+
       stream.active = true
       stream.save
    end
@@ -134,6 +142,10 @@ When('there are groups:') do |table|
       
       if s[:modifyDate] && s[:modifyDate].length > 0
          group.modifyDate = parse_date(s[:modifyDate])
+      end
+
+      if s[:upstream] && s[:upstream].length > 0
+         user.upstream = s[:upstream] == "true"
       end
 
       group.name = s[:name]
