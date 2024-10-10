@@ -122,7 +122,7 @@ Given(/^there are streams:$/) do |table|
       end
 
       if s[:upstream] && s[:upstream].length > 0
-         user.upstream = s[:upstream] == "true"
+         stream.upstream = s[:upstream] == "true"
       end
 
       stream.active = true
@@ -145,7 +145,7 @@ When('there are groups:') do |table|
       end
 
       if s[:upstream] && s[:upstream].length > 0
-         user.upstream = s[:upstream] == "true"
+         group.upstream = s[:upstream] == "true"
       end
 
       group.name = s[:name]
