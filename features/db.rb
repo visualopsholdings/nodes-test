@@ -260,6 +260,20 @@ Given('the server has privateKey in file {string}') do |path|
    info.save
 end
 
+Given('the server has hasInitialSync') do
+   info = FactoryBot.build(:info)
+   info.type = "hasInitialSync"
+   info.text = "true"
+   info.save
+end
+
+Given('the server has upstreamLastSeen {string}') do |date|
+   info = FactoryBot.build(:info)
+   info.type = "upstreamLastSeen"
+   info.text = parse_date(date)
+   info.save
+end
+
 Given("there are sites:") do |table|
    table.hashes.each do |s|
       site = FactoryBot.build(:site)
