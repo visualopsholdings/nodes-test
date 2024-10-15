@@ -279,6 +279,13 @@ Given('the server has upstreamLastSeen {string}') do |date|
    info.save
 end
 
+Given('the server has upstreamMirror') do
+   info = FactoryBot.build(:info)
+   info.type = "upstreamMirror"
+   info.text = "true"
+   info.save
+end
+
 Given("there are sites:") do |table|
    table.hashes.each do |s|
       site = FactoryBot.build(:site)
