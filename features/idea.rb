@@ -9,5 +9,6 @@ class Idea
    field :user, type: String # in message
    field :modifyDate, type: Time # in message and idea
    field :stream, type: String # in message and idea
+   field :doc, type: String # empty (message), "" or a valid id
    
 end

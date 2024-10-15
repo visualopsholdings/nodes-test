@@ -197,6 +197,11 @@ When('there are ideas:') do |ideas|
       if s[:modifyDate] && s[:modifyDate].length > 0
          idea.modifyDate = parse_date(s[:modifyDate])
       end
+      if s[:doc] && s[:doc].length > 0
+         idea.doc = Doc.where(name: s[:doc]).first._id.to_s
+      else
+         idea.doc = ""
+      end
       idea.save
    end
 
@@ -344,4 +349,255 @@ end
 
 When(/^eventually the group "([^"]*)" with (\d+) member appears in the DB$/) do |group, count|
    eventually { expect(Group.where(name: group).first.group_members.count).to eq(count.to_i) }
+end
+
+Given(/^there are media:$/) do |table|
+   table.hashes.each do |s|
+      media = FactoryBot.build(:media)
+      media.name = s[:name]
+      if s[:id] && s[:id].length > 0
+         media._id =  s[:id]
+      end
+      if s[:policy] && s[:policy].length > 0
+         media.policy =  Policy.where(name: s[:policy]).first._id.to_s
+      end
+      if s[:modifyDate] && s[:modifyDate].length > 0
+         media.modifyDate = parse_date(s[:modifyDate])
+      end    
+      if s[:upstream] && s[:upstream].length > 0
+         media.upstream = s[:upstream] == "true"
+      end
+
+      media.save
+   end
+end
+
+Given(/^there are formats for media "([^"]*)":$/) do |media, table|
+
+   media = Media.where(name: media).first._id.to_s
+   
+   table.hashes.each do |s|
+   
+      f = FactoryBot.build(:format)
+      f.media = media
+      f.name = s[:name]
+      f.uuid = s[:uuid]
+      
+      p = FactoryBot.build(:format_property)
+      p.name = "ffmpegVersion"
+      p.value = "1.0.0"
+      f.format_property << p
+      
+      p = FactoryBot.build(:format_property)
+      p.name = "start"
+      p.value = "0.000000"
+      f.format_property << p
+      
+      if s[:md5hash] && s[:md5hash].length > 0
+         f.md5hash = s[:md5hash]
+      end
+      
+      if s[:type] == "movie"
+         f.mime = "video/mp4"
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "duration"
+         p.value = "00:00:25.93"
+         f.format_property << p
+         
+         s = FactoryBot.build(:format_stream)
+         s.streamType = "video"
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "encoding"
+         p.value = "H.264"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "colorspace"
+         p.value = "yuv420p"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "width"
+         p.value = "640"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "height"
+         p.value = "480"
+         s.format_property << p
+
+         p = FactoryBot.build(:format_property)
+         p.name = "bitrate"
+         p.value = "357 kb/s"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "framerate"
+         p.value = "24 fps"
+         s.format_property << p
+         
+         f.format_stream << s
+         
+         s = FactoryBot.build(:format_stream)
+         s.streamType = "audio"
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "encoding"
+         p.value = "aac"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "samplerate"
+         p.value = "16000 Hz"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "channels"
+         p.value = "mono"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "format"
+         p.value = "fltp"
+         s.format_property << p
+
+         p = FactoryBot.build(:format_property)
+         p.name = "bitrate"
+         p.value = "334 kb/s"
+         s.format_property << p
+         
+         f.format_stream << s
+
+      elsif s[:type] == "audio"
+      
+         f.mime = "audio/mp3"
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "duration"
+         p.value = "00:00:25.93"
+         f.format_property << p
+         
+         s = FactoryBot.build(:format_stream)
+         s.streamType = "audio"
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "encoding"
+         p.value = "aac"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "samplerate"
+         p.value = "16000 Hz"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "channels"
+         p.value = "mono"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "format"
+         p.value = "fltp"
+         s.format_property << p
+
+         p = FactoryBot.build(:format_property)
+         p.name = "bitrate"
+         p.value = "334 kb/s"
+         s.format_property << p
+         
+         f.format_stream << s
+
+      else
+         f.mime = "image/jpg"
+         
+         s = FactoryBot.build(:format_stream)
+         s.streamType = "video"
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "encoding"
+         p.value = "mjpeg"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "colorspace"
+         p.value = "yuvj444p"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "width"
+         p.value = "1024"
+         s.format_property << p
+         
+         p = FactoryBot.build(:format_property)
+         p.name = "height"
+         p.value = "768"
+         s.format_property << p
+         
+         f.format_stream << s
+
+      end
+      
+      f.save
+   end
+end
+
+When(/^user "([^"]*)" has image "([^"]*)"$/) do |user, image|
+   user = User.where(name: user).first
+   user.image = Media.where(name: image).first._id.to_s
+   user.save
+end
+
+When(/^group "([^"]*)" has image "([^"]*)"$/) do |group, image|
+   group = Group.where(name: group).first
+   group.image = Media.where(name: image).first._id.to_s
+   group.save
+end
+
+When(/^stream "([^"]*)" has image "([^"]*)"$/) do |name, image|
+   stream = Stream.where(name: name).first
+   stream.image = Media.where(name: image).first._id.to_s
+   stream.save
+end
+
+Given(/^there are docs:$/) do |table|
+   table.hashes.each do |s|
+      if s[:data] && s[:data].length > 0
+         if s[:id] && s[:id].length > 0
+            doc = Doc.uploadWithId(s[:data], s[:id])
+         else
+            doc = Doc.upload(s[:data])
+         end
+      else
+         doc = FactoryBot.build(:doc)
+         if s[:id] && s[:id].length > 0
+            doc._id = s[:id]
+         end
+      end
+      
+      if s[:modifyDate] && s[:modifyDate].length > 0
+         doc.modifyDate = parse_date(s[:modifyDate])
+      end
+      
+      if s[:upstream] && s[:upstream].length > 0
+         doc.upstream = s[:upstream] == "true"
+      end
+
+      doc.name = s[:name]
+
+      if s[:policy] && s[:policy].length > 0
+         doc.policy = Policy.where(name: s[:policy]).first._id.to_s
+      end
+      doc.save
+   end
+end
+
+Given(/^the doc "([^"]*)" imports docs:$/) do |name, table|
+   doc = Doc.where(name: name).first
+   doc.imports = []
+   table.hashes.each do |s|
+      doc.imports.push(Doc.where(name: s[:name]).first._id.to_s)
+   end
+   doc.save
 end

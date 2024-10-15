@@ -46,5 +46,18 @@ FactoryBot.define do
    factory :node do |f|
    end
 
+   factory :media do |f|
+      f.modifyDate { DateTime.now }
+   end
+
+   factory :format do |f|
+      f.modifyDate { DateTime.now }
+   end
+
+   factory :format_stream do |f|
+   end
+
+   factory :format_property do |f|
+   end
 
 end
