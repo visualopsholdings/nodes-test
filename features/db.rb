@@ -608,3 +608,7 @@ Given(/^the doc "([^"]*)" imports docs:$/) do |name, table|
    end
    doc.save
 end
+
+When('eventually the stream {string} has {int} ideas in the DB') do |name, count|
+   eventually { expect(Idea.where(basedoc: nil, stream: Stream.where(name: name).first._id.to_s).count).to eq(count.to_i) }
+end
