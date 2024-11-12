@@ -171,16 +171,16 @@ When('there are users in group {string}:') do |name, table|
    end
    group.save
    
-   puts `$NODES_HOME/build/nodesaggregate --coll=group $NODES_HOME/scripts/useringroups.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=group --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/useringroups.json`
 
 end
 
 When('the security indexes are generated') do
 
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/groupeditpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/groupviewpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/usereditpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy $NODES_HOME/scripts/userviewpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/groupeditpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/groupviewpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/usereditpermissions.json`
+   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/userviewpermissions.json`
 
 end
 
