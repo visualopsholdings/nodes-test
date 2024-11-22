@@ -171,16 +171,16 @@ When('there are users in group {string}:') do |name, table|
    end
    group.save
    
-   aggregate("useringroups.json")
+   aggregate("useringroups.json", "group")
 
 end
 
 When('the security indexes are generated') do
 
-   aggregate("groupeditpermissions.json")
-   aggregate("groupviewpermissions.json")
-   aggregate("usereditpermissions.json")
-   aggregate("userviewpermissions.json")
+   aggregate("groupeditpermissions.json", "policy")
+   aggregate("groupviewpermissions.json", "policy")
+   aggregate("usereditpermissions.json", "policy")
+   aggregate("userviewpermissions.json", "policy")
 
 end
 

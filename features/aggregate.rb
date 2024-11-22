@@ -1,5 +1,5 @@
 
-def aggregate(script)
+def aggregate(script, coll)
 
    home = ENV['NODES_HOME']
    dbname=ENV['MONGO_PORT_27017_DB']
@@ -8,7 +8,7 @@ def aggregate(script)
       dbname ='dev'
    end
    
-   cmd = home + "/build/nodesaggregate --coll=group --dbName=" + dbname + " " + home + "/scripts/" + script
+   cmd = home + "/build/nodesaggregate --coll=" + coll + " --dbName=" + dbname + " " + home + "/scripts/" + script
    puts `#{cmd}`
 
 end
