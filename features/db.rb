@@ -171,16 +171,16 @@ When('there are users in group {string}:') do |name, table|
    end
    group.save
    
-   puts `$NODES_HOME/build/nodesaggregate --coll=group --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/useringroups.json`
+   aggregate("useringroups.json")
 
 end
 
 When('the security indexes are generated') do
 
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/groupeditpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/groupviewpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/usereditpermissions.json`
-   puts `$NODES_HOME/build/nodesaggregate --coll=policy --dbName=$MONGO_PORT_27017_DB $NODES_HOME/scripts/userviewpermissions.json`
+   aggregate("groupeditpermissions.json")
+   aggregate("groupviewpermissions.json")
+   aggregate("usereditpermissions.json")
+   aggregate("userviewpermissions.json")
 
 end
 
@@ -335,10 +335,6 @@ end
 
 Given(/^eventually there are (\d+) ideas in the DB$/) do |n|
    eventually { expect(Idea.count).to eq(n.to_i) }
-end
-
-Given('eventually there are {int} users in the DB') do |count|
-   eventually { expect(User.count).to eq(count.to_i) }
 end
 
 When('the server has nodes:') do |table|
