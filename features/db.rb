@@ -99,6 +99,53 @@ Given(/^there are policies:$/) do |table|
    
 end
 
+
+Given(/^there are collections:$/) do |table|
+
+   table.hashes.each do |s|
+      collection = FactoryBot.build(:collection)
+      
+      if s[:id] && s[:id].length > 0
+         collection._id = s[:id]
+      end
+      
+      if s[:modifyDate] && s[:modifyDate].length > 0
+         collection.modifyDate = parse_date(s[:modifyDate])
+      end
+
+      collection.name = s[:name]
+
+      if s[:policy] && s[:policy].length > 0
+         collection.policy = Policy.where(name: s[:policy]).first._id.to_s
+      end
+
+      if s[:upstream] && s[:upstream].length > 0
+         collection.upstream = s[:upstream] == "true"
+      end
+
+      collection.active = true
+      collection.save
+   end
+end
+
+When('there are objs:') do |table|
+
+   table.hashes.each do |s|
+      obj = FactoryBot.build(:obj)
+      obj.text = s[:name]
+      obj.policy = Policy.where(name: s[:policy]).first._id.to_s
+      if s[:by] && s[:by].length > 0
+         obj.user = User.where(name: s[:by]).first._id.to_s
+      end
+      obj.coll = Collection.where(name: s[:collection]).first._id.to_s
+      if s[:modifyDate] && s[:modifyDate].length > 0
+         obj.modifyDate = parse_date(s[:modifyDate])
+      end
+      obj.save
+   end
+
+end
+
 Given(/^there are streams:$/) do |table|
 
    table.hashes.each do |s|
@@ -129,7 +176,6 @@ Given(/^there are streams:$/) do |table|
       stream.save
    end
 end
-
 
 When('there are groups:') do |table|
 

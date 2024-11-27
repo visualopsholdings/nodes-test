@@ -15,7 +15,11 @@ FactoryBot.define do
       f.hash { '9TxF9r/DTwYKu1WadrlhHlnbXnAWflF5gqZ9+M0VX1Hyq8ixnle6OIkS+lm2xl6KxxW0Af9CaJNacVGuBi5Pbsj4RiSN1FrXxtKnLqKkdskNfSQnRktDzZO88iBC7kp80vscAUysH0H+U2Ihs623eEN3LY47Z5vUu+uTsN5Wxs8=' }
    end
 
-   factory :stream do |f|
+   factory :collection do |f|
+      f.modifyDate { DateTime.now }
+   end
+
+   factory :obj do |f|
       f.modifyDate { DateTime.now }
    end
 
@@ -35,15 +39,19 @@ FactoryBot.define do
    factory :group_member do |f|
    end
 
-   factory :idea do |f|
-      f.modifyDate { DateTime.now }
-   end
-
    factory :site do |f|
       f.modifyDate { DateTime.now }
    end
    
    factory :node do |f|
+   end
+
+   factory :stream do |f|
+      f.modifyDate { DateTime.now }
+   end
+
+   factory :idea do |f|
+      f.modifyDate { DateTime.now }
    end
 
    factory :media do |f|
