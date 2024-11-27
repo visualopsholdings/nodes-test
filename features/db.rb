@@ -383,6 +383,10 @@ Given(/^eventually there are (\d+) ideas in the DB$/) do |n|
    eventually { expect(Idea.count).to eq(n.to_i) }
 end
 
+Given(/^eventually there are (\d+) users in the DB$/) do |n|
+   eventually { expect(User.count).to eq(n.to_i) }
+end
+
 When('the server has nodes:') do |table|
 
    table.hashes.each do |s|
