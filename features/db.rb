@@ -667,6 +667,6 @@ When('eventually the stream {string} has {int} ideas in the DB') do |name, count
    eventually { expect(Idea.where(basedoc: nil, stream: Stream.where(name: name).first._id.to_s).count).to eq(count.to_i) }
 end
 
-When('eventually the collection {string} has {int} objs in the DB') do |string, int|
+When('eventually the collection {string} has {int} objs in the DB') do |name, count|
    eventually { expect(Obj.where(coll: Collection.where(name: name).first._id.to_s).count).to eq(count.to_i) }
 end
