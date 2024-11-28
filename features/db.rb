@@ -371,6 +371,10 @@ Given('eventually there are {int} groups in the DB') do |count|
    eventually { expect(Group.count).to eq(count.to_i) }
 end
 
+When('eventually there are {int} collections in the DB') do |count|
+   eventually { expect(Collection.count).to eq(count.to_i) }
+end
+
 When('eventually there are {int} streams in the DB') do |count|
    eventually { expect(Stream.count).to eq(count.to_i) }
 end
