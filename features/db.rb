@@ -132,12 +132,20 @@ When('there are objs:') do |table|
 
    table.hashes.each do |s|
       obj = FactoryBot.build(:obj)
+      
+      if s[:id] && s[:id].length > 0
+         obj._id = s[:id]
+      end
+      
       obj.text = s[:name]
       obj.policy = Policy.where(name: s[:policy]).first._id.to_s
+      
       if s[:by] && s[:by].length > 0
          obj.user = User.where(name: s[:by]).first._id.to_s
       end
+      
       obj.coll = Collection.where(name: s[:collection]).first._id.to_s
+      
       if s[:modifyDate] && s[:modifyDate].length > 0
          obj.modifyDate = parse_date(s[:modifyDate])
       end
