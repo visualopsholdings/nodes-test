@@ -1,4 +1,9 @@
 
+# lookup the Obj id.
+def get_id(s)
+   return s[0] == '_' ? OBJ_IDS[s[1..]] : s
+end
+
 Given(/^there are users:$/) do |users|
 
    users.hashes.each do |s|
@@ -8,7 +13,7 @@ Given(/^there are users:$/) do |users|
       user.admin = s[:admin]
       
       if s[:id] && s[:id].length > 0
-         user._id = s[:id]
+         user._id =  get_id(s[:id])
       end
       
       if s[:fullname] && s[:fullname].length > 0
@@ -42,7 +47,7 @@ Given(/^there are policies:$/) do |table|
       policy.name = s[:name]
       
       if s[:id] && s[:id].length > 0
-         policy._id = s[:id]
+         policy._id =  get_id(s[:id])
       end
       
 #       if s[:users] && s[:users].length > 0
@@ -99,14 +104,13 @@ Given(/^there are policies:$/) do |table|
    
 end
 
-
 Given(/^there are collections:$/) do |table|
 
    table.hashes.each do |s|
       collection = FactoryBot.build(:collection)
       
       if s[:id] && s[:id].length > 0
-         collection._id = s[:id]
+         collection._id =  get_id(s[:id])
       end
       
       if s[:modifyDate] && s[:modifyDate].length > 0
@@ -134,7 +138,7 @@ When('there are objs:') do |table|
       obj = FactoryBot.build(:obj)
       
       if s[:id] && s[:id].length > 0
-         obj._id = s[:id]
+         obj._id =  get_id(s[:id])
       end
       
       obj.text = s[:name]
@@ -160,7 +164,7 @@ Given(/^there are streams:$/) do |table|
       stream = FactoryBot.build(:stream)
       
       if s[:id] && s[:id].length > 0
-         stream._id = s[:id]
+         stream._id =  get_id(s[:id])
       end
       
       if s[:modifyDate] && s[:modifyDate].length > 0
@@ -191,7 +195,7 @@ When('there are groups:') do |table|
       group = FactoryBot.build(:group)
       
       if s[:id] && s[:id].length > 0
-         group._id = s[:id]
+         group._id =  get_id(s[:id])
       end
       
       if s[:modifyDate] && s[:modifyDate].length > 0
