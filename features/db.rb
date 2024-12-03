@@ -1,7 +1,7 @@
 
 # lookup the Obj id.
 def get_id(s)
-   return s[0] == '_' ? OBJ_IDS[s[1..]] : s
+   return s[0] == '$' ? OBJ_IDS[s[1..]] : s
 end
 
 Given(/^there are users:$/) do |users|
