@@ -1,5 +1,16 @@
 
 # lookup the Obj id.
+# If you maintain a dictionary like this:
+#
+# OBJ_IDS = { 
+#   "tracy" => "6121bdfaec9e5a059715739c",
+#   "leanne" => "6142d258ddf5aa5644057d35",
+#   ...
+# }
+# Then any ID that starts with a $ will have this name
+# lookup applied to it.
+#
+
 def get_id(s)
    return s[0] == '$' ? OBJ_IDS[s[1..]] : s
 end

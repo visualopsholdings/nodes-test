@@ -11,7 +11,7 @@ def aggregate(script, coll)
    end
    
    cmd = home + "/build/nodesaggregate --coll=" + coll + " --dbName=" + dbname + " " + home + "/scripts/" + script
-   puts `#{cmd}`
+   `#{cmd}`
 
 end
 
