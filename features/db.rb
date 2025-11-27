@@ -418,6 +418,10 @@ Given(/^eventually there are (\d+) users in the DB$/) do |n|
    eventually { expect(User.count).to eq(n.to_i) }
 end
 
+When('eventually there are {int} media in the DB') do |count|
+   eventually { expect(Media.count).to eq(count.to_i) }
+end
+
 When('the server has nodes:') do |table|
 
    table.hashes.each do |s|

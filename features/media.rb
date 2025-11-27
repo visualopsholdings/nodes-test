@@ -7,5 +7,6 @@ class Media
    field :modifyDate, type: Time
    field :policy, type: String
    field :upstream, type: Boolean
+   field :uuid, type: String
    
 end
