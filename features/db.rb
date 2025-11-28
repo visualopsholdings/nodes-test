@@ -164,6 +164,9 @@ When('there are objs:') do |table|
       if s[:modifyDate] && s[:modifyDate].length > 0
          obj.modifyDate = parse_date(s[:modifyDate])
       end
+      if s[:uuid] && s[:uuid].length > 0
+         obj.uuid = s[:uuid]
+      end
       obj.save
    end
 

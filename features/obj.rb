@@ -9,5 +9,6 @@ class Obj
    field :user, type: String
    field :modifyDate, type: Time
    field :coll, type: String
+   field :uuid, type: String
    
 end
