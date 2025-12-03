@@ -10,5 +10,6 @@ class Obj
    field :modifyDate, type: Time
    field :coll, type: String
    field :uuid, type: String
+   field :binStatus, type: Integer
    
 end

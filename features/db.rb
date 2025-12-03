@@ -704,3 +704,7 @@ end
 When('eventually the collection {string} has {int} objs in the DB') do |name, count|
    eventually { expect(Obj.where(coll: Collection.where(name: name).first._id.to_s).count).to eq(count.to_i) }
 end
+
+When('eventually the obj {string} has bin status {int} in the DB') do |id, status|
+   eventually { expect(Obj.where(_id: id).first,binStatus).to eq(status) }
+end
